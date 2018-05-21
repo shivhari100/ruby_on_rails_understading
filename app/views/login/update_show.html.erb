@@ -1,0 +1,14 @@
+
+<% if @user.errors.full_messages.any? %>
+  <% @user.errors.full_messages.each do |error_message| %>
+    <%= error_message  %> <br />
+  <% end %>
+<% end %>
+
+<%= form_tag login_update_path do %>
+    <%= text_field_tag :id, @user.id, type: :hidden %>
+    <%= text_field_tag :user_name, @user.user_name %>
+    <%= text_field_tag :password, @user.password %>
+    <%= submit_tag %>
+<% end %>
+<%= link_to 'return to list', root_path %>

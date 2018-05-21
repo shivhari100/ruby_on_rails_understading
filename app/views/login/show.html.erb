@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>USER NAME</th>
+        <th>PASSWORD</th>
+    </tr>
+    <tr>
+        <td>
+            <%= @user.id %>
+        </td>
+<td><%= @user.user_name %></td>
+<td><%= @user.password %></td>
+</tr>
+</table>
+<%= link_to 'return to list', root_path %>

@@ -1,0 +1,12 @@
+CREATE USER <br>
+------------
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+
+<%= form_tag login_create_path do %> 
+    <%= text_field_tag :user_name %>
+    <%= text_field_tag :password %>
+    <%= submit_tag %>
+<% end %>
+<%= link_to 'return to list', root_path %> 
